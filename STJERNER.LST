@@ -1,0 +1,34 @@
+Cls
+Setcolor 0,0
+Setcolor 15,1911
+Repeat
+  X=Random(639)
+  Y=Random(390)
+  C=Random(4)
+  Color C
+  Plot X,Y
+Until Inkey$<>""
+
+X1=-100
+X2=0
+X3=639
+X4=390
+
+Color 0
+Repeat
+  Box X1,X2,X3,X4
+  Add X1,1
+  Add X2,1
+  Sub X3,1
+  Sub X4,1
+Until X1=100
+
+Cls
+Deftext 15,1,1
+Text 200,180,"     This was a"
+Deftext 15,1,1
+Text 200,200,"Demo by Christian L”naas"
+Pause 200
+Setcolor 0,1911
+Setcolor 15,0
+Edit
