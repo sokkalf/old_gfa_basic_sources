@@ -1,0 +1,5 @@
+Spoke &H484,Peek(&H484) And 2
+Print "Keyclick off";Chr$(191)
+Print Chr$(171);" N† installert ";Chr$(172)
+Print Chr$(190);Chr$(189);"Copyright 1994 by CHRISTIAN L";Chr$(178);"NAAS"
+Pause 200
