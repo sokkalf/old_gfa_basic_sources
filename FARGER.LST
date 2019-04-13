@@ -1,0 +1,108 @@
+Deffill 6,2,8
+Fill 10,10
+Deftext 3,4,5,6,32
+Text 55,90,"DET FARGESPRAKENE OPPLEGGET"
+Pause 100
+For I=1 To 300
+Next I
+Cls
+Defmouse 3
+For A=0 To 500
+  Deffill Random(16)
+  X=Random(400)
+  Y=Random(199)
+  Pbox X,Y,X+8,Y+8
+Next A
+Color 0
+Line 0,0,319,0
+For Rep=0 To 199
+  Vsync
+  Bmove Xbios(2),Xbios(2)+160,32000
+Next Rep
+For I=1 To 300
+Next I
+Cls
+Graphmode 3
+Target=Timer+1000
+Repeat
+  For A=3 To 99
+    For I=0 To 150 Step A
+      Pbox I,I,I+A,I+A
+    Next I
+  Next A
+  For A=99 Downto 3
+    For I=0 To 150 Step A
+      Pbox I,I,I+A,I+A
+    Next I
+  Next A
+Until Timer>Target
+For I=1 To 300
+Next I
+Cls
+Graphmode 1
+Deffill 2,4,4
+Fill 10,10
+For I=1 To 300
+Next I
+Cls
+Deffill 3,4,4
+Fill 10,10
+For I=1 To 300
+Next I
+Cls
+Graphmode 3
+Target=Timer+1000
+Repeat
+  For A=3 To 99
+    For I=0 To 150 Step A
+      Pbox I,I,I+A,I+A
+    Next I
+  Next A
+  For A=99 Downto 3
+    For I=0 To 150 Step A
+      Pbox I,I,I+A,I+A
+    Next I
+  Next A
+Until Timer>Target
+Graphmode 1
+Deffill 4,4,4
+Fill 10,10
+For I=1 To 300
+Next I
+Cls
+Deffill 7,4,4
+Fill 10,10
+For I=1 To 300
+Next I
+Cls
+Defmouse 7
+For A=0 To 500
+  Deffill Random(16)
+  X=Random(319)
+  Y=Random(199)
+  Pbox X,Y,X+8,Y+8
+Next A
+Color 0
+Line 0,0,319,0
+For Rep=0 To 199
+  Vsync
+  Bmove Xbios(2),Xbios(2)+160,32000
+Next Rep
+Deftext 3,4,5,6,32
+Text 150,50,"DET FARGESPRAKENDE"
+Deftext 3,4,5,6,32
+Text 150,60,"OPPLEGGET SLUTTER HER!"
+N=1
+F=1
+Do
+  Color F
+  Circle N,N,60
+  If N=300 Then
+    End
+  Endif
+  If F=10 Then
+    F=1
+  Endif
+  Inc F
+  Inc N
+Loop
