@@ -1,0 +1,410 @@
+If Exist("OL_FAKTA.INF") Then
+Else
+  Alert 3,"Programmet vil lage|en fil som heter|OL_FAKTA.INF",1,"OK",J
+  Open "O",#1,"OL_FAKTA.INF"
+  Close #1
+Endif
+If Xbios(4)<>2 Then
+  Alert 3,"Dette programmet virker|bare pÜ s/v skjerm",1,"OK",Q
+  Edit
+Endif
+Spoke &H484,Peek(&H484) And 2
+Dim A$(29)
+A$(0)="DE "
+A$(1)="Om Programmet..."
+A$(2)=""
+A$(3)="XVII "
+A$(4)="OL vinnere    "
+A$(5)="Langrenn      "
+A$(6)="Alpint        "
+A$(7)="Skiskyting    "
+A$(8)="Skîyter       "
+A$(9)="--------------"
+A$(10)="Slutte        "
+A$(11)=""
+A$(12)="OLYMPISKE "
+A$(13)=" Freestyle      "
+A$(14)=" Hopp           "
+A$(15)=" Kombinert      "
+A$(16)=" Idrettsstjerner"
+A$(17)=""
+A$(18)="VINTER "
+A$(19)="  Om OL         "
+A$(20)="  OL byer       "
+A$(21)="  Vikingskipet  "
+A$(22)="  OL Ilden      "
+A$(23)="  BOB og Aking  "
+A$(24)=""
+A$(25)="LEKER"
+A$(26)="Kristin og HÜkon"
+A$(27)="Kortbanelîp     "
+A$(28)="Stafett         "
+A$(29)="Minne?          "
+Menu A$()
+Text 400,14,"Pè LILLEHAMMER"
+Repeat
+  On Menu Gosub
+  If Menu(0)=1 Then
+    Alert 3,"Programmet er laget|av Christian Lînaas|og Thomas Lînaas",1,"OK",A
+    Print A
+  Endif
+  If Menu(0)=4 Then
+    Print At(1,5);"Ol Vinnere Fra Albertville                                          "
+    Print At(1,6);"Langrenn:                                                               "
+    Print At(1,7);"Vegard Ulvang,Bjîrn DÑhlie                                                   "
+    Print At(1,8);"Skîyter:                                                                                    "
+    Print At(1,9);"Johann Olav Koss,Geir Karlstad                                                         "
+    Print At(1,10);"SUPER-G                                                           "
+    Print At(1,11);"Kjetil AndrÇ Aamodt                                                  "
+    Print At(1,12);"                                                                                           "
+    Print At(1,13);"                                                                           "
+    Print At(1,14);"                                                                              "
+    Print At(1,15);"                                                                             "
+    Print At(1,16);"                                                                                                                    "
+    Print At(1,17);"                                                                                                                                  "
+    Print At(1,18);"                                                                                                                         "
+    Print At(1,19);"                                                                                                                                                               "
+    Print At(1,20);"                                                                                                            "
+    Print At(1,21);"                                                                                                                                            "
+    Print At(1,22);"                                                                                                                          "
+  Endif
+  If Menu(0)=5 Then
+    Print At(1,5);"Fakta om LANGRENN:                                                                                                "
+    Print At(1,6);"˘Langrenn var den nest stîrste grenen pÜ Lillehammer                                                                   "
+    Print At(1,7);"˘I Jaktstart gÜr lîperne fîrst en kort klassisk distanse.                                                                          "
+    Print At(1,8);"˘Vinneren av dette lîpet starter fîrst i det andre lîpet,                                                                                   "
+    Print At(1,9);"som er en lengre distanse i friteknikk.                                                                                                            "
+    Print At(1,10);"˘Lîperne starter med en tidsavstand som resultatlisten                                                                    "
+    Print At(1,11);"fra det fîrste lîpet viser.Den komer fîrst i mÜl i det andre                                              "
+    Print At(1,12);"lîpet har vunnet hele îvelsen.                                                                                                                          "
+    Print At(1,13);"                                                                                                                                            "
+    Print At(1,14);"                                                                                                                                                              "
+    Print At(1,15);"                                                                                                                                                         "
+    Y$="                                                                                                                                     "
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=6 Then
+    Print At(1,5);"Alpint:                                                             "
+    Print At(1,6);"Utfor og Super-G:                                                        "
+    Print At(1,7);"Utforlîypa pÜ kvitfjell regnes som en av verdens tîffeste.          "
+    Print At(1,8);"I det bratteste henget blir det hopp pÜ opptil 80 meter!!!!!!!!!!!"
+    Print At(1,9);"Lîypa er designet av den sveitsiske utforkjîreren Bernhard Russi   "
+    Print At(1,10);"(OL-Gull i 1972)                                                            "
+    Print At(1,11);"Kvitfjell er ogsÜ arena for Super-G,den andre alpine fartsdisiplinen"
+    Print At(1,12);"Lîypa er kortere og mer svingete enn i utfor.                        "
+    Print At(1,13);"SlalÜm og StorslalÜm:                                                 "
+    Print At(1,14);"I en slalÜmlîype skal hîydeforskjellen vÑre mellom 140 og 220 Meter(for menn)                           "
+    Print At(1,15);"I en storslalÜmlîype skal den vÑre mellom 250 og 400 meter(for menn)                        "
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=7 Then
+    Print At(1,5);"Skiskyting:                                                                                 "
+    Print At(1,6);"Skiskyting er en av de mest spennende vintersportsgrenene.                        "
+    Print At(1,7);"Et eneste bomskudd kan spolere hele lîpet,selv om man har vÑrt god pÜ ski      "
+    Print At(1,7);"PÜ 20 og 15 km er det to stÜende og to liggende skytinger.                                                                     "
+    Print At(1,8);"Hvert bomskudd medfîrer et tilleggsminutt.                                                                                                                                                      "
+    Print At(1,9);"                                                                                                           "
+    Print At(1,10);"                                                                                                  "
+    Print At(1,11);"                                                                                                            "
+    Print At(1,12);"                                                                                                 "
+    Print At(1,13);"                                                                                                         "
+    Print At(1,14);"                                                                                                                                    "
+    Print At(1,15);"                                                                                                              "
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=8 Then
+    Print At(1,5);"Skîyter:                                                                                              "
+    Print At(1,6);"Hurtiglîp pÜ skîyter er en av norges sterkeste OL-grener.                                     "
+    Print At(1,7);"Banens lengde er 400 m.To tjuvstarter medfîrer diskvalifikasjon                    "
+    Print At(1,8);"Under vinterlekene i Lake Placid i 1932 ble skîytelîpene avviklet med fellesstart"
+    Print At(1,9);"Med opptil 9 mann i hvert heat resultatet ble fullstendig kaos.                                      "
+    Print At(1,10);"ôvelser:                                                                                             "
+    Print At(1,11);"Menn:500 m,1000 m,1500 m,5000 m og 10000 m.                                                               "
+    Print At(1,12);"Kvinner:500 m,1000 m,1500 m,3000 m og 5000 m.                                                                              "
+    Print At(1,13);"                                                                                                      "
+    Print At(1,14);"                                                                                                                "
+    Print At(1,15);"                                                                                                      "
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=10 Then
+    Alert 2,"Vil du virkelig slutte?",1,"JA|NEI",G
+    Print G
+  Endif
+  If G=1 Then
+    Edit
+  Endif
+  If Menu(0)=13 Then
+    Print At(1,5);"Freestyle:                                                                                          "
+    Print At(1,6);"Kulekjîring:                                                                                                            "
+    Print At(1,7);"Her gjelder det og ta seg ned en 250 meter lang og 30 meter bred bakke                                       "
+    Print At(1,8);"som er jevnt dekket med kuler.I tileg til Ü kjîre ned bakken,mÜ                                                "
+    Print At(1,9);"Utîveren utfîre to figurhopp.Et dommerpanel gir karakterer for kjîreteknikk"
+    Print At(1,10);"og hopputfîrelse.ôvelsen gÜr over to dager.                                                                                      "
+    Print At(1,11);"Hopp:                                                                                                          "
+    Print At(1,12);"Freestylehoppingen foregÜr i en liten spesialbygd hoppbakke, med"
+    Print At(1,13);"unnarenn pÜ 30 meter og ovarenn pÜ 60 meter.konkurannsen gÜr over"
+    Print At(1,14);"to omganger,og utîverne mÜ utfîre to forskjellige hopp.                                                                               "
+    Print At(1,15);"Et dommerpanel gir karakterer for sats,hîyde,lengde,form og landing."
+    Print At(1,16);"                                                                                                                           "
+    Print At(1,17);"                                                                                                             "
+    Print At(1,18);"                                                                                                                  "
+    Print At(1,20);"                                                                                                              "
+    Print At(1,21);"                                                                                                                                  "
+    Print At(1,22);"                                                                                                                         "
+  Endif
+  If Menu(0)=14 Then
+    Print At(1,5);"Hopp:                                                                                          "
+    Print At(1,6);"I 1991 fant Jan Boklîv opp V-Stilen                                                                              "
+    Print At(1,7);"Snart begynte alle de andre hopperne Ü bruke V-Stilen                               "
+    Print At(1,8);"Espen Bredesen er Norges beste hopper!!!!!!!!!!!!!!                                        "
+    Print At(1,9);"Lasse Ottesen tok Sîlv i Lillehammer '94                                                                       "
+    Print At(1,10);"Tysklands beste hopper er Jens Weinsflog.                                                                        "
+    Print At(1,11);Y$
+    Print At(1,12);Y$
+    Print At(1,13);"                                                                                                      "
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=15 Then
+    Print At(1,5);"Kombinert:                                                                                               "
+    Print At(1,6);"Kombinert er kanskje den mest krevende av alle vintersportsgrener                                                                            "
+    Print At(1,7);"Kombinertkonkurransen starter med hopp.Der er det tre omganger.                                                  "
+    Print At(1,8);"Den tredje omgangen er bare for de beste fra de to fîrste omgangene.                                              "
+    Print At(1,9);"OgsÜ er det langrenn,og den som fikk flest poeng i hopp,starter fîrst.                                    "
+    Print At(1,10);"Den som kommer fîrst i mÜl har vunnet hele kombinert konkurransen.                                      "
+    Print At(1,11);Y$
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=16 Then
+    Print At(1,5);"Norske Idrettsstjerner                                                                                        "
+    Print At(1,6);"Espen Bredesen (Hopp)                                                                                               "
+    Print At(1,7);"Lasse Ottesen (Hopp)                                                                                             "
+    Print At(1,8);"Vegard Ulvang (Langrenn)                                                                                           "
+    Print At(1,9);"Bjîrn DÑhlie (Langrenn)                                                                                          "
+    Print At(1,10);"Kjetil AndrÇ Aamodt (Alpint)                                                                                          "
+    Print At(1,11);"Lasse Kjus   (Alpint)                                                                                         "
+    Print At(1,12);"Stine Lise Hattestad (Kulekjîring)                                                                                    "
+    Print At(1,13);"Sture Sivertsen (Langrenn)                                                                                           "
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=19 Then
+    Print At(1,5);"De antikke Olympiske Leker:                                                                                 "
+    Print At(1,6);"De fîrste Olympiske Leker ble holdt i Ür 776 f.kr.                                                                                 "
+    Print At(1,7);"Det skjedde i byen Olympia i Hellas og der mÜtte alle deltakerene"
+    Print At(1,8);"vÑre nakne.Bryting,lîping,lengdehopp,diskos og spydkast var noen av lekene"
+    Print At(1,9);"Ingen damer hadde adgang til hverken og delta eller se pÜ.                                                         "
+    Print At(1,10);"Hvis noen damer sÜ pÜ,ble de kastet utfor nÑrmeste stup.                                                            "
+    Print At(1,11);Y$
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=20 Then
+    Print At(1,5);"Vinter OL-byer:                                                                                                 "
+    Print At(1,6);"1924 Chamonix (Frankrike)                                                                                           "
+    Print At(1,7);"1928 Sankt-Moritz (Sveits)                                                                                          "
+    Print At(1,8);"1932 Lake Placid (USA)                                                                                   "
+    Print At(1,9);"1936 Garmisch-Partenkirchen (Tyskland)                                                                                           "
+    Print At(1,10);"1948 Sankt-Moritz (Sveits)                                                                                        "
+    Print At(1,11);"1952 Oslo (Norge)                                                                                      "
+    Print At(1,12);"1956 Cortina (Italia)                                                                                     "
+    Print At(1,13);"1960 Squaw Valley (USA)                                                                                   "
+    Print At(1,14);"1964 Innsbruck (ôsterrike)                                                                                  "
+    Print At(1,15);"1968 Grenoble (Frankrike)                                                                                        "
+    Print At(1,16);"1972 Sapporo (Japan)                                                                                                  "
+    Print At(1,17);"1976 Innsbruck (ôsterrike)                                                                                     "
+    Print At(1,18);"1980 Lake Placid (USA)                                                                                   "
+    Print At(1,19);"1984 Sarajevo (Jugoslavia)                                                                                   "
+    Print At(1,20);"1988 Calgary (Canada)                                                                                   "
+    Print At(1,21);"1992 Albertville (Frankrike)                                                                                   "
+    Print At(1,22);"1994 Lillehammer (Norge)                                                                                                                                        "
+    Print At(1,23);"1998 Nagano (Japan)                                                                                                       "
+  Endif
+  If Menu(0)=21 Then
+    Print At(1,5);"Vikingskipet:                                                                                             "
+    Print At(1,6);"Er Norges fîrste innendîrs arena for hurtiglîp pÜ skîyter.                                                                         "
+    Print At(1,7);"Etter OL skal den kjempestore hallen brukes til en mengde ting:                           "
+    Print At(1,8);"Fotball,friidrett,bandy,curling,langrenn,motorsport,hestesport og konserter.                          "
+    Print At(1,9);"Vikingskipet er en av verdens stîrste trebygninger.                                                                    "
+    Print At(1,10);"Til hver av de 104 meter lange limtredragerne(verdens lengste)                                                                         "
+    Print At(1,11);"som holder hallen oppe,gikk det med virke fra 1000 trÑr.                                                                        "
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=22 Then
+    Print At(1,5);"OL-Ilden:                                                                                        "
+    Print At(1,6);"Lillehammers Ol-Fakkel er hele 170 cm lang.Ilden ser ut som et flagg                                                             "
+    Print At(1,7);"nÜr den er i fart.Den 12.feb var fakkelen fremme i Lillehammer.                                                                     "
+    Print At(1,8);"Der ble den en av hovedattraksjonene under Üpningsseremonien.                                                         "
+    Print At(1,9);"NÜr fakkelen ankom Oslo den 5.feb Ble Morgedals ilden forenet med den                                              "
+    Print At(1,10);"olympiske ild fra Olympia,Hellas                                                                                       "
+    Print At(1,11);"OL-Fakkelen ble tent den 27.nov i Morgedal i Telemark.                                                                     "
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=23 Then
+    Print At(1,5);"BOB og Aking:                                                                                       "
+    Print At(1,6);"BOB:                                                                                          "
+    Print At(1,7);"ôvelser: 2'er bob og 4'er bob.Det er ikke egen klasse for kvinner.                               "
+    Print At(1,8);"Vekt:390 og 630 kilo inkludert kjîrerne.ved lavere vekt kan blylodd benyttes.                        "
+    Print At(1,9);"Start:Boben lîpes igang av kjîrerne.                                                                         "
+    Print At(1,10);"Aking:                                                                                        "
+    Print At(1,11);"ôvelser:Single for menn og kvinner,double for menn.                                 """
+    Print At(1,12);"Vekt:Akere som veier mindre en 90 KG (menn) eller 75 kg (kvinner)                  "
+    Print At(1,13);"kan îke vekten ved hjelp av blylodd.                                                                    "
+    Print At(1,14);"Start:Akern drar seg igang og dytter ifra pÜ isen med pigghansker.                              "
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=26 Then
+    Print At(1,5);"Kristin og HÜkon:                                                                                                 "
+    Print At(1,6);"Kristin og HÜkon er de offisielle OL-maskotene for Lillehammer'94.                                                        "
+    Print At(1,7);"De er oppkalt etter to kongebarn fra middelalderen.                                                                           "
+    Print At(1,8);"HÜkon ble fîdt i 1204.Han var sînn av birkebeinerkongen HÜkon,som                              "
+    Print At(1,9);"dîde samme Ür.To Ür senere mÜtte birkebeinerne flykte fra sine fiender                         "
+    Print At(1,10);"baglerne med lille HÜkon.flukten gikk til Lillehammer og videre til                                                      "
+    Print At(1,11);"ôsterdalen.                                                                                                     "
+    Print At(1,12);"Kristin ble fîdt i 1181.Hun var datter av birkebeinerkongen Sverre.                           "
+    Print At(1,13);"Da hun ble voksen,giftet hun seg med baglernes konge.GiftermÜlet                                                                      "
+    Print At(1,14);"fîrte til forlik mellom de to fiendegruppene og var Ürsaken til at                             "
+    Print At(1,15);"HÜkon ble valgt til Norges eneste konge.                                                                                   "
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  Y$="                                                                                                                         "
+  If Menu(0)=27 Then
+    Print At(1,5);"Kortbanelîp:                                                                                        "
+    Print At(1,6);"I mange land er kortbanelîp den mest populÑre formen for hurtiglîp                                               "
+    Print At(1,7);"pÜ skîyter.Utstyr:Spesialskîyter,hjelm,hansker,legg og knebeskyttere                                                      "
+    Print At(1,8);"og halsbeskyttere.                                                                                        "
+    Print At(1,9);"ôvelser:500 m,1000 m og stafett (3000 m kvinner og 5000 m menn)                                        "
+    Print At(1,10);Y$
+    Print At(1,11);Y$
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=28 Then
+    Print At(1,5);"Stafett:                                                                                                 "
+    Print At(1,6);"Stafett er nesten det samme som langrenn,men nÜr man har gÜtt en"
+    Print At(1,7);"etappe,sender man en annen av sted pÜ neste etappe.                                                                              "
+    Print At(1,8);"Hvis hele stafetten er 40 km lang,og det gÜr 4 stykker,skrives det"
+    Print At(1,9);"som 4X10 km.                                                                                       "
+    Print At(1,10);Y$
+    Print At(1,11);Y$
+    Print At(1,12);Y$
+    Print At(1,13);Y$
+    Print At(1,14);Y$
+    Print At(1,15);Y$
+    Print At(1,16);Y$
+    Print At(1,17);Y$
+    Print At(1,18);Y$
+    Print At(1,19);Y$
+    Print At(1,20);Y$
+    Print At(1,21);Y$
+    Print At(1,22);Y$
+  Endif
+  If Menu(0)=29 Then
+    Print At(1,5);"Minnet er:";Fre(0)
+    Print At(1,6);"Diskettplass er:";Dfree(0)
+  Endif
+Until Inkey$=Chr$(27)
+Alert 2,"Vil du virkelig slutte?",1,"JA|Oops",W
+Print W
+If W=1 Then
+  Edit
+Endif
