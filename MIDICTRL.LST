@@ -1,0 +1,9 @@
+Gosub A
+Procedure A
+  Print "2=Horn 4=El bass 34=Synth Brass 6=Sopran sax 10=Klarinett 14=Fl”yte"
+  Print "18=Obo 22=Harmonica 26=Fl”yte2 30=Music box 61=Klokkespill 66=Jazz orgel"
+  Print "44=Celesta 56=Vibrafon 63=Cello 343=Tilfeldig 475834854=Pr”v!Ha!Ha!"
+  Input "Lydnr : ",A
+  Void Xbios(12,A,L:&H43)
+  Gosub A
+Return
